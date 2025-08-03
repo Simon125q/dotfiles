@@ -27,12 +27,6 @@ shopt -s checkwinsize
 # match all files and zero or more directories and subdirectories.
 #shopt -s globstar
 
-# Set up fzf key bindings and fuzzy completion
-eval "$(fzf --bash)"
-
-# run neofetch at start of the terminal
-neofetch
-
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
@@ -81,8 +75,7 @@ esac
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='lsd'
-    #alias ls='ls --color=auto'
+    alias ls='ls --color=auto'
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
 
@@ -97,26 +90,7 @@ fi
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
-alias lsa='ls -A'
 alias l='ls -CF'
-
-# git aliases
-alias lgit='git --oneline --decorate --tree --all'
-
-# neovim aliases
-alias v='nvim'
-alias vi='nvim'
-alias vim='nvim'
-alias sv='sudo nvim'
-
-# bat aliases
-
-alias bat='batcat --color=always'
-
-# fzf aliases
-alias fzf="fzf --preview='batcat --color=always {}'"
-alias inv='nvim $(fzf --preview="batcat --color=always {}")'
-
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -141,18 +115,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-bind 'set show-all-if-ambiguous on'
-bind 'TAB:menu-complete'
-
-# ~/.bashrc
-
-
-# init starship
-eval "$(starship init bash)"
-
-# declare path
-PATH=/home/simon/.local/opt/go-v1.22.3/bin:/home/simon/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/simon/.dotnet/tools
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"

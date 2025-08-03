@@ -1,0 +1,30 @@
+apt:htop
+apt:curl
+apt:fzf
+apt:bat
+apt:ripgrep
+apt:wget
+apt:curl
+apt:git
+apt:htop
+apt:tmux
+apt:neofetch
+apt:jq
+
+flatpak:md.obsidian.Obsidian
+flatpak:app.zen_browser.zen
+
+
+#curl -sS https://starship.rs/install.sh | sh
+#curl -sS https://webi.sh/lsd | sh
+
+#flatpak:org.gimp.GIMP
+#wget:https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+
+
+#kitty
+#docker
+#nerdfonts
+#ghostty
+#go
+#nvim
