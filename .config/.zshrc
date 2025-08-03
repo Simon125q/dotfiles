@@ -1,8 +1,19 @@
-export PATH="$PATH:/opt/nvim-linux64/bin"
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+export PATH="$HOME/.local/opt/go/bin:$PATH"
+export PATH="$PATH:$HOME/go/bin"
+export PATH="$PATH:$HOME/bin"
+export PATH="$PATH:/bin"
+export PATH="$PATH:/usr/bin"
+export PATH="$PATH:/$HOME/.local/bin"
+export PATH="$PATH:/opt/jdk-21.0.6+7/bin"
+export XDG_CONFIG_HOME="$HOME/.config"
+
 # Set up the prompt
 # some more ls aliases
 
 neofetch
+
+alias update='sudo apt update && sudo apt upgrade -y'
 
 alias ls='lsd -F'
 alias ll='lsd -lAF'
@@ -17,6 +28,7 @@ alias lgit='git --oneline --decorate --tree --all'
 alias v='nvim'
 alias vi='nvim'
 alias vim='nvim'
+alias svim='sudo nvim'
 alias sv='sudo nvim'
 
 # bat aliases
@@ -39,10 +51,11 @@ setopt histignorealldups sharehistory
 # Use emacs keybindings even if our EDITOR is set to vi
 bindkey -e
 
-# Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
-HISTSIZE=1000
-SAVEHIST=1000
+# Keep 10000 lines of history within the shell and save it to ~/.zsh_history:
+HISTSIZE=10000
+SAVEHIST=10000
 HISTFILE=~/.zsh_history
+setopt SHARE_HISTORY
 
 # Use modern completion system
 autoload -Uz compinit
@@ -69,4 +82,19 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 eval "$(starship init zsh)"
+
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+
+source /home/simon/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+export EDITOR=nvim

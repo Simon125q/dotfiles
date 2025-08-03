@@ -34,6 +34,7 @@ while IFS= read -r line; do
         fi
     fi
 
+    mkdir -p "$(dirname "$dest")"
     ln -s "$src" "$dest"
     if [[ $? -eq 0 ]]; then
         echo "Symlink created: $dest -> $src"

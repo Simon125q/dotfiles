@@ -20,6 +20,7 @@ This repository contains dotfiles for configuring various software including:
 
 - **install-software.sh** — Installs software from a list using system package manager, Flatpak, or by downloading AppImages and other files.
 - **create-symlinks.sh** — Creates symbolic links (symlinks) for configuration files and directories, making it easy to manage dotfiles.
+- **config-tmux.sh** - Installs Tmux Package Manager (tpm) and installs plugins
 
 ---
 
