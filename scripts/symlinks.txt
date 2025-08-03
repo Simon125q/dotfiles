@@ -1,0 +1,9 @@
+# Bash and Zsh RCs to home directory
+/home/$USER/dotfiles/.config/.bashrc /home/$USER/.bashrc
+/home/$USER/dotfiles/.config/.zshrc /home/$USER/.zshrc
+
+# Config directories and files to ~/.config
+/home/$USER/dotfiles/.config/nvim /home/$USER/.config/nvim
+/home/$USER/dotfiles/.config/tmux /home/$USER/.config/tmux
+/home/$USER/dotfiles/.config/kitty /home/$USER/.config/kitty
+/home/$USER/dotfiles/.config/starship.toml /home/$USER/.config/starship.toml
