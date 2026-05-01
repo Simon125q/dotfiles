@@ -4,3 +4,8 @@
 @define-color border #d4be98;
 @define-color foreground #d4be98;
 @define-color background #282828;
+
+.box-wrapper {
+  border-radius: 6px;
+  border-width: 1px;
+}
