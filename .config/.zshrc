@@ -11,7 +11,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 # Set up the prompt
 # some more ls aliases
 
-neofetch
+#neofetch
 
 alias update='sudo apt update && sudo apt upgrade -y'
 
