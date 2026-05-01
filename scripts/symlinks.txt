@@ -7,3 +7,14 @@
 /home/simon/dotfiles/.config/tmux/tmux.conf /home/simon/.config/tmux/tmux.conf
 /home/simon/dotfiles/.config/kitty /home/simon/.config/kitty
 /home/simon/dotfiles/.config/starship.toml /home/simon/.config/starship.toml
+/home/simon/dotfiles/.config/hypr /home/simon/.config/hypr
+/home/simon/dotfiles/.config/.gitconfig /home/simon/.gitconfig
+/home/simon/dotfiles/.config/waybar /home/simon/.config/waybar
+/home/simon/dotfiles/.config/walker /home/simon/.config/walker
+/home/simon/dotfiles/.config/mako /home/simon/.config/mako
+/home/simon/dotfiles/.config/btop /home/simon/.config/btop
+/home/simon/dotfiles/.config/fastfetch /home/simon/.config/fastfetch
+/home/simon/dotfiles/.config/ghostty /home/simon/.config/ghostty
+/home/simon/dotfiles/.config/uwsm /home/simon/.config/uwsm
+/home/simon/dotfiles/.config/swayosd /home/simon/.config/swayosd
+/home/simon/dotfiles/.config/omarchy /home/simon/.config/omarchy
