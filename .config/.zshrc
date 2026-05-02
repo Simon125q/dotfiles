@@ -6,6 +6,7 @@ export PATH="$PATH:/bin"
 export PATH="$PATH:/usr/bin"
 export PATH="$PATH:/$HOME/.local/bin"
 export PATH="$PATH:/opt/jdk-21.0.6+7/bin"
+export PATH="$HOME/.local/share/mise/shims/:$PATH"
 export XDG_CONFIG_HOME="$HOME/.config"
 
 # Set up the prompt
